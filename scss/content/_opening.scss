@@ -1,0 +1,61 @@
+@use '../variables/colors' as c;
+@use '../variables/var' as v;
+@use '../modules/mixins' as m;
+@use '../content/base';
+@use "../content/buttons";
+
+.opening {
+  .opening__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
+
+    @include m.mobile {
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-family: v.$font-raleway;
+      font-size: 49px;
+      line-height: 57px;
+      margin-bottom: 25px;
+
+      @include m.mobile {
+        text-align: center;
+      }
+
+    }
+
+    p {
+      font-family: v.$font-open-sans;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 38px;
+
+      @include m.mobile {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+    }
+
+    @include m.mobile {
+      .btn {
+        margin: 0 15px;
+        padding: 22px 92px;
+        display: block;
+      }
+    }
+  }
+
+  .opening__image {
+    width: 100%;
+    height: auto;
+
+    @include m.mobile {
+      width: 220%;
+      transform: translateX(-28%);
+    }
+  }
+}
