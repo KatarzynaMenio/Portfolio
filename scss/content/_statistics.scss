@@ -1,0 +1,160 @@
+@use '../variables/colors' as c;
+@use '../variables/var' as v;
+@use '../modules/mixins' as m;
+@use '../content/base';
+@use "../content/buttons";
+
+
+.statistics {
+  .container {
+    .opening__header {
+      margin-top: 100px;
+      margin-bottom: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+
+      @include m.mobile {
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 50px;
+          margin-bottom: 30px;
+
+      }
+    }
+
+    .statistics__container {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      @include m.mobile {
+        display: block;
+      }
+
+
+      .statistics__single {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: v.$font-raleway;
+        margin-bottom: 121px;
+
+        @include m.mobile {
+          margin-bottom: 50px;
+        }
+
+        &:nth-child(1) {
+          .statistics__circle {
+            background-color: c.$color-redish;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 13px;
+
+            @include m.mobile {
+              width: 63px;
+              height: 63px;
+              margin-bottom: 14px;
+            }
+
+            img {
+              position: relative;
+              top: 0;
+              left: 45%;
+
+              @include m.mobile {
+                top: 0;
+                left: 35%;
+              }
+            }
+          }
+        }
+
+
+        &:nth-child(2) {
+          .statistics__circle {
+            background-color: c.$color-primary;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 13px;
+
+            @include m.mobile {
+              width: 63px;
+              height: 63px;
+              margin-bottom: 14px;
+            }
+
+            img {
+              position: relative;
+              bottom: -8px;
+              left: 45%;
+
+              @include m.mobile {
+                bottom: -15px;
+                left: 35%;
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          .statistics__circle {
+            background-color: c.$color-green;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 13px;
+
+            @include m.mobile {
+              width: 63px;
+              height: 63px;
+              margin-bottom: 14px;
+            }
+
+            img {
+              position: relative;
+              bottom: -2px;
+              left: 45%;
+
+              @include m.mobile {
+                bottom: -5px;
+                left: 45%;
+              }
+            }
+          }
+        }
+
+
+        .statistics__number {
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 6px;
+          font-family: v.$font-raleway;
+          font-weight: 700;
+          margin-bottom: 13px;
+        }
+
+        .statistics__description {
+          font-size: 16px;
+          line-height: 19px;
+          color: c.$color-grey;
+
+
+        }
+      }
+    }
+
+
+  }
+}
