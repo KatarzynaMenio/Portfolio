@@ -54,8 +54,8 @@
     height: auto;
 
     @include m.mobile {
-      width: 220%;
-      transform: translateX(-28%);
+      max-width: 220%;
+      width: 100%;
     }
   }
 }
