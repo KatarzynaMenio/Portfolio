@@ -1,0 +1,280 @@
+@use '../variables/colors' as c;
+@use '../variables/var' as v;
+@use '../modules/mixins' as m;
+@use '../content/base';
+
+
+.pricing__container {
+  margin-bottom: 60px;
+
+  .pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m.notebook {
+      margin: 50px auto;
+    }
+  }
+
+  .pricing__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    @include m.notebook {
+      flex-direction: column;
+      //justify-content: center;
+      //align-items: center;
+      width: 100%;
+    }
+
+    .pricing__box {
+      width: 370px;
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include m.notebook {
+        width: 100%;
+        max-width: 370px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        justify-content: center;
+        padding: 25px 10px 0 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .pricing__box--basic {
+      border: 1px solid c.$color-redish;
+      margin-right: 60px;
+
+      @include m.notebook {
+        margin: 0 0 60px 0;
+        flex-direction: row;
+      }
+
+
+      .pricing__details {
+
+        @include m.notebook {
+          margin-right: 43px;
+
+        }
+        .pricing__type {
+          font-size: 20px;
+          line-height: 1px;
+          font-family: v.$font-raleway;
+          font-weight: 700;
+          margin-top: 40px;
+          margin-bottom: 30px;
+
+        }
+
+        .pricing__price {
+          font-size: 46px;
+          font-family: v.$font-open-sans;
+          font-weight: 300;
+          color: c.$color-redish;
+          margin-bottom: 69px;
+          text-align: center;
+        }
+      }
+
+      .pricing__items {
+        .pricing__item {
+          font-size: 14px;
+          font-family: v.$font-open-sans;
+          line-height: 41px;
+
+          &::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            margin-right: 10px;
+            background-image: url("../assets/Ckechmark-1.svg");
+
+          }
+
+          &.pricing__item--not::before {
+            background-image: url("../assets/Close.svg");
+          }
+
+        }
+      }
+
+      .btn__basic {
+        position: relative;
+        height: 50px;
+        background-color: c.$color-redish;
+        top: 30px;
+      }
+
+
+    }
+
+
+    .pricing__box--professional {
+      border: 1px solid c.$color-primary;
+      margin-right: 60px;
+      box-shadow: 5px 10px 27px #07ACE629;
+
+      @include m.notebook {
+        margin: 0 0 60px 0;
+        padding: 50px 20px;
+        flex-direction: row;
+      }
+
+
+      .pricing__details {
+        @include m.notebook {
+          margin-right: 43px;
+
+        }
+        .pricing__type {
+          font-size: 20px;
+          line-height: 1px;
+          font-family: v.$font-raleway;
+          font-weight: 700;
+          margin-top: 70px;
+          margin-bottom: 20px;
+        }
+
+        .pricing__price {
+          font-size: 46px;
+          font-family: v.$font-open-sans;
+          font-weight: 300;
+          color: c.$color-primary;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .pricing__limited {
+          font-size: 12px;
+          color: c.$color-black;
+          font-weight: 700;
+          font-family: v.$font-raleway;
+          margin-bottom: 61px;
+          text-align: center;
+        }
+      }
+
+      .pricing__items {
+        .pricing__item {
+          font-size: 14px;
+          font-family: v.$font-open-sans;
+          line-height: 41px;
+
+          &::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            margin-right: 10px;
+            background-image: url("../assets/Ckechmark-1.svg");
+
+          }
+
+          &.pricing__item--not::before {
+            background-image: url("../assets/Close.svg");
+          }
+
+        }
+      }
+
+      .btn__professional {
+        position: relative;
+        height: 50px;
+        background-color: c.$color-primary;
+        top: 30px;
+      }
+    }
+
+  }
+
+
+  .pricing__box--premium {
+    border: 1px solid c.$color-green;
+
+
+    @include m.notebook {
+      margin: 0 0 60px 0;
+      flex-direction: row!important;
+    }
+
+    .pricing__details {
+      @include m.notebook {
+        margin-right: 43px;
+
+      }
+      .pricing__type {
+        font-size: 20px;
+        line-height: 1px;
+        font-family: v.$font-raleway;
+        font-weight: 700;
+        margin-top: 34px;
+        margin-bottom: 20px;
+
+      }
+
+      .pricing__price {
+        font-size: 46px;
+        font-family: v.$font-open-sans;
+        font-weight: 300;
+        color: c.$color-green;
+        margin-bottom: 10px;
+      }
+
+      .pricing__limited {
+        font-size: 12px;
+        color: c.$color-black;
+        font-weight: 700;
+        font-family: v.$font-raleway;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+    }
+
+    .pricing__items {
+      .pricing__item {
+        font-size: 14px;
+        font-family: v.$font-open-sans;
+        line-height: 41px;
+
+        &::before {
+          content: "";
+          width: 11px;
+          height: 11px;
+          display: inline-block;
+          margin-right: 10px;
+          background-image: url("../assets/Ckechmark-1.svg");
+        }
+      }
+    }
+
+    .btn__premium {
+      position: relative;
+      height: 50px;
+      background-color: c.$color-green;
+      top: 25px;
+    }
+
+
+  }
+
+
+}
+
+
+
