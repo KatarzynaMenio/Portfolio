@@ -6,11 +6,14 @@
 
 .contact__container {
   display: flex;
-  justify-content: center;
 
   .contact__information {
     display: flex;
     margin-top: 95px;
+
+    justify-content: center;
+
+    padding-bottom: 50px;
 
 
     @include m.tablet {
@@ -76,7 +79,7 @@
           margin-left: 10px;
 
           @include m.tablet {
-           margin: 0;
+            margin: 0;
           }
         }
 
