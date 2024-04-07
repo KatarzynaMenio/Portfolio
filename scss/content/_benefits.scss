@@ -88,13 +88,7 @@
     }
 
     .benefits__text-accent2 {
-      &::after {
-        content: "";
-        width: 332px;
-        height: 4px;
-        background-color: c.$color-primary;
-        display: block;
-        margin-top: 50px;
+
 
         @include m.tablet {
           display: none;
@@ -119,8 +113,11 @@
     }
 
     .benefits__single--notebook {
+      height: auto;
 
-
+      @include m.notebook {
+        height: auto;
+      }
       .benefits__text {
         .benefits__description {
           padding-right: 300px;
@@ -150,11 +147,19 @@
           rotate: 45deg;
           z-index: 0;
 
+          @include m.notebook {
+            width: 160px;
+            height: 160px;
+            right: 100px;
+            top: 25px;
+          }
+
           @include m.tablet {
             width: 90px;
             height: 90px;
             right: 100px;
             top: 25px;
+            border-radius: 20px;
           }
         }
 
@@ -201,8 +206,9 @@
           @include m.tablet {
             width: 150px;
             height: 150px;
-            left: 40px;
+            left: 20px;
             top: 10px;
+
           }
         }
 
@@ -215,7 +221,7 @@
           @include m.tablet {
             width: auto;
             height: 175px;
-            margin: 10px 40px 0 30px;
+            margin: 30px 40px 0 30px;
           }
 
         }
@@ -267,7 +273,7 @@
       }
     }
   }
-}
+
 
 
 //.benefits {

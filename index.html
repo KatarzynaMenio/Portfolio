@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Warsztat 1</title>
+    <title>Best-shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap"
@@ -204,26 +204,26 @@
                     Choose package
                 </div>
 
-                <ul class="select__dropdown">
+                <ul class="select__dropdown open">
                     <li data-value="basic">Basic</li>
                     <li data-value="professional">Professional</li>
                     <li data-value="premium">Premium</li>
                 </ul>
             </div>
             <label class="form__checkbox">
-                <input type="checkbox" id="accounting"/>
+                <input class="checkbox__style "type="checkbox" id="accounting"/>
                 <span class="checkbox"></span>
                 <p class="consent__text">Accounting</p>
             </label>
             <label class="form__checkbox">
-                <input type="checkbox" id="terminal"/>
+                <input class="checkbox__style" type="checkbox" id="terminal"/>
                 <span class="checkbox"></span>
                 <p class="consent__text">Rental of a payment terminal</p>
             </label>
         </form>
 
         <div class="calc__summary">
-            <ul>
+            <ul class = "list__summary">
                 <li class="list__item" data-id="products">
                     <span class="item__type">Products</span>
                     <span class="item__calc">20 * $0.5</span>
@@ -255,12 +255,6 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
 
 
 
@@ -328,10 +322,6 @@
 
 
 
-
-
-
-
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__left">
@@ -344,6 +334,8 @@
         </div>
     </div>
 </footer>
+
+<script src="js/app.js" type="module"></script>
 
 </body>
 </html>
