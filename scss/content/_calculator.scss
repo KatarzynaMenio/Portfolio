@@ -45,7 +45,7 @@
     padding: 11px 20px;
     line-height: 1em;
     font-size: 0.8125rem;
-    box-shadow: 0px 3px 6px c.$color-primary-shadow;
+    box-shadow: 0 3px 6px c.$color-primary-shadow;
     margin-bottom: 20px;
     background-color: c.$color-white;
   }
@@ -114,8 +114,15 @@
   }
 
   .form__checkbox {
+    display: flex;
+    .checkbox__style {
+      width: 20px;
+      height: 20px;
+    }
     .consent__text {
-      padding-top: 4px;
+      padding-left: 8px;
+      margin-bottom: 10px;
+      margin-top: 3px;
     }
   }
 
@@ -124,6 +131,7 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     @include m.tablet {
       width: 100%;
@@ -133,10 +141,11 @@
 
     .summary__total,
     .list__item {
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
       border-radius: 6px;
       justify-content: space-between;
       align-items: center;
+      text-align: center;
       color: c.$color-white;
       font-size: 0.875rem;
       display: none;
