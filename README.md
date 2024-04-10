@@ -6,8 +6,10 @@ BestShop is a responsive website designed to showcase and promote various produc
 
 **Screenshots:**
 
+<span>
 <img src="assets/photos/best-shop.png" alt="bestshop" height="400">
 <img src="assets/photos/best-shop-rwd.png" alt="about_section" height="400">
+</span>
 
 ## Technologies
 
