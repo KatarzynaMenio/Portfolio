@@ -3,7 +3,6 @@
 @use '../modules/mixins' as m;
 @use '../content/base';
 
-
 .footer {
   background-color: c.$color-light-grey;
   box-shadow: 0px -5px 40px #00000029;
@@ -39,12 +38,7 @@
 
         &:last-child {
           margin-left: 10px;
-
-          //@include m.tablet {
-          //  margin: 0;
-          //}
         }
-
       }
     }
   }

@@ -3,7 +3,6 @@
 @use '../modules/mixins' as m;
 @use '../content/base';
 
-
 .contact__container {
   display: flex;
 
@@ -57,7 +56,6 @@
       margin-bottom: 42px;
       font-family: Open Sans, sans-serif;
       font-weight: 400;
-
     }
 
     .contact__info {
@@ -82,13 +80,11 @@
             margin: 0;
           }
         }
-
       }
 
       img {
         margin-right: 10px;
       }
-
     }
   }
 
@@ -124,9 +120,7 @@
           height: 42px;
           font-size: 15px;
           margin-bottom: 42px;
-
         }
-
       }
 
       .form__email {
@@ -170,8 +164,6 @@
             background-position: center;
             background-size: 50%;
             background-repeat: no-repeat;
-            //border: 1px solid #949799;
-
           }
         }
 
@@ -184,19 +176,13 @@
           background-color: var(--color-white);
           border-radius: 4px;
           border: 1px solid #949799;
-
         }
       }
 
       .btn--last {
         width: fit-content;
         align-self: flex-end;
-
       }
-
-
     }
-
-
   }
 }
