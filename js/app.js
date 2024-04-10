@@ -16,16 +16,13 @@ const extras = {
 }
 
 // pobranie inputów, select, checkbox
-
 const productInput = document.getElementById('products');
 const orderInput = document.getElementById('orders');
 const packageInput = document.getElementById('package');
 const checkboxAcounting = document.getElementById("accounting");
 const checkboxRental = document.getElementById("terminal");
 
-
 // pobranie elementy summary
-
 const summaryList = document.querySelector(".list__summary");
 const summaryListItems = summaryList.children
 const priceContainer = document.getElementById("total-price");
@@ -34,9 +31,7 @@ const totalPrice = document.querySelector(".total__price");
 const selectList = document.querySelector(".select__dropdown");
 const selectItem = selectList.children;
 
-
-//Eventy
-
+// eventy
 productInput.addEventListener("focusin", handleProductInputFocusIn);
 productInput.addEventListener("focusout", handleProductInputFocusOut);
 productInput.addEventListener("keyup", handleProductInputKeyup);
@@ -54,15 +49,14 @@ Array.from(selectItem).forEach(item => {
 checkboxAcounting.addEventListener("change", handleCheckboxChange);
 checkboxRental.addEventListener("change", handleCheckboxChange);
 
-//Sumy w funkcjach
-
+// sumy w funkcjach
 let finalPriceProduct = 0;
 let finalPriceOrder = 0;
 let finalPricePackage = 0;
 let finalPriceAccounting = 0;
 let finalPriceRental = 0;
 
-//Funkcje
+// funkcje
 updateTotalPrice()
 priceContainer.classList.add("open");
 
@@ -80,10 +74,9 @@ function handleProductInputFocusOut(event) {
 
 function handleProductInputKeyup(event) {
 
-
-
     const inputValue = event.target.value
     const validationResultInput1 = inputsValidation(inputValue)
+
     if (!validationResultInput1) {
         event.target.value = ""
         finalPriceProduct = 0;
@@ -91,6 +84,7 @@ function handleProductInputKeyup(event) {
 
         return
     }
+
     console.log(validationResultInput1)
     const itemCalc = summaryListItems[0].querySelector(".item__calc")
     itemCalc.innerText = `${inputValue} * ${prices.products}`
@@ -108,7 +102,6 @@ function handleProductInputKeyup(event) {
 function handleOrderInputFocusIn(event) {
     event.preventDefault()
     event.target.style.border = "2px solid #08a6e4";
-
 }
 
 function handleOrderInputFocusOut(event) {
@@ -145,7 +138,6 @@ function handlePackageSelectClick(event) {
 
     const selectElement = event.target.parentElement
     selectElement.classList.toggle("open")
-
 }
 
 function handleSelectListClick(event) {
@@ -214,7 +206,6 @@ function handleCheckboxChange (event) {
     }
 
     updateTotalPrice()
-
 }
 
 // Podsumowanie sum wszystkich elmentów
@@ -246,7 +237,5 @@ function inputsValidation (value) {
     }
 
     return true
-
-
 }
 
